@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bio Stanza</title>
+  <title>Tienda de Maderas Sustentables</title>
   <style>
     /* Estilos generales */
     body {
@@ -9,8 +9,15 @@
       margin: 0;
       padding: 0;
       background-color: #f2f2f2;
+      color: #333333;
     }
     
+    a {
+      color: #228b22;
+      text-decoration: none;
+    }
+    
+    /* Encabezado */
     header {
       background-color: #ffffff;
       padding: 20px;
@@ -23,6 +30,31 @@
       color: #228b22;
     }
     
+    /* Navegación */
+    nav {
+      background-color: #228b22;
+      padding: 10px 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    
+    /* Sección de productos */
     main {
       padding: 20px;
       display: flex;
@@ -37,6 +69,7 @@
       margin: 20px;
       width: 300px;
       padding: 20px;
+      position: relative;
     }
     
     .product img {
@@ -55,62 +88,165 @@
       color: #666666;
     }
     
+    .product .description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+    
+    .product:hover .description {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Pie de página */
     footer {
-      background-color: #228b22;
-      color: #ffffff;
+      background-color: #f2f2f2;
       padding: 20px;
       text-align: center;
+    }
+    
+    footer a {
+      color: #228b22;
+      text-decoration: none;
+    }
+    
+    /* Carrito de compra */
+    .cart {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cart p {
+      margin: 0;
+      color: #666666;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>BioStanza</h1>
+    <h3>Tu hogar sostenible comienza aquí ... donde el diseño se une a la naturaleza</h3>
   </header>
   
+  <nav>
+    <ul>
+      <li><a href="#hogar">Hogar</a></li>
+      <li><a href="#mascotas">Mascotas</a></li>
+      <li><a href="#no-plastic">No Plastic</a></li>
+    </ul>
+  </nav>
+  
   <main>
-    <div class="product">
-      <img src="mueble1.jpg" alt="Mueble 1">
-      <h3>Dog house</h3>
-      <p>Precio: $1,199</p>
-      <p>Descripción: La casa de perro hecha con madera sustentable es un refugio ecológico y cómodo para tu mascota. 
-        
-        Fabricada con madera proveniente de fuentes renovables y certificadas, esta casa ofrece un espacio seguro y 
-        acogedor para tu perro, al tiempo que respeta el medio ambiente. Con un diseño resistente y duradero, esta 
-        casa proporciona protección contra los elementos y promueve la ventilación adecuada para el confort de tu perro. 
-        
-        Al elegir una casa de perro hecha con madera sustentable, estás contribuyendo a la conservación de los recursos 
-        naturales y cuidando el bienestar de tu mascota de manera responsable.</div>
+    <section id="hogar">
+      <h2>HOGAR</h2>
+      
+      <div class="product">
+        <img src="mueble1.jpg" alt="Mueble 1">
+        <h3><a href="#">Mueble 1</a></h3>
+        <div class="description">
+          <p>Descripción del Mueble 1</p>
+        </div>
+      </div>
+      
+      <!-- Añadir más productos aquí -->
+      
+      <div class="product">
+        <img src="mueble2.jpg" alt="Mueble 2">
+        <h3><a href="#">Mueble 2</a></h3>
+        <div class="description">
+          <p>Descripción del Mueble 2</p>
+        </div>
+      </div>
+    </section>
     
-    <!-- Añadir más productos aquí -->
+    <section id="mascotas">
+      <h2>MASCOTAS</h2>
+      
+      <div class="product">
+        <img src="casa-mascota.jpg" alt="Casa para Mascota">
+        <h3><a href="#">Casa para Mascota</a></h3>
+        <div class="description">
+          <p>Descripción de la Casa para Mascota</p>
+        </div>
+      </div>
+      
+      <!-- Añadir más productos aquí -->
+      
+      <div class="product">
+        <img src="bebedero-comedero.jpg" alt="Bebedero/Comedero">
+        <h3><a href="#">Bebedero/Comedero</a></h3>
+        <div class="description">
+          <p>Descripción del Bebedero/Comedero</p>
+        </div>
+      </div>
+      
+      <div class="product">
+        <img src="rascador.jpg" alt="Rascador">
+        <h3><a href="#">Rascador</a></h3>
+        <div class="description">
+          <p>Descripción del Rascador</p>
+        </div>
+      </div>
+    </section>
     
-    <div class="product">
-      <img src="mueble2.jpg" alt="Mueble 2">
-      <h3>Cat House</h3>
-      <p>Precio: $299</p>
-      <p>Descripción: El rascador casa de gato es el lugar perfecto para que tu felino pueda afilar sus uñas y jugar. 
-        
-        Diseñado pensando en las necesidades naturales de los gatos, este rascador está fabricado con materiales sostenibles y duraderos.
-        La estructura cuenta con diferentes niveles y áreas de rascado cubiertas de sisal resistente, que ayudan a mantener las uñas de tu gato saludables y a evitar que dañe tus muebles. 
-        
-        Además, la casa integrada en el rascador proporciona un espacio cómodo y seguro para que tu gato descanse y se sienta protegido. 
-        
-        Con el rascador casa de gato, brindas a tu felino una forma divertida y segura de satisfacer sus instintos naturales mientras decoras tu hogar con un mueble funcional y estéticamente atractivo. </p>
-    </div>
-    
-    <div class="product">
-      <img src="mueble3.jpg" alt="Mueble 3">
-      <h3>Bebedero</h3>
-      <p>Precio: $249</p>
-      <p>Descripción: El bebedero comedero para gato es el accesorio ideal para garantizar que tu felino se mantenga hidratado y bien alimentado. 
-        
-        Este práctico dispositivo combina un recipiente de comida y un recipiente de agua en un solo lugar conveniente. Fabricado con materiales seguros y de alta calidad, el bebedero comedero cuenta con compartimentos separados para el agua y la comida, manteniéndolos frescos y limpios. 
-        
-        Además, su diseño antideslizante evita que se mueva durante las comidas o que el agua se derrame accidentalmente. 
-        
-        Con el bebedero comedero, puedes asegurarte de que tu gato tenga acceso constante a agua fresca y comida nutritiva, facilitando su alimentación diaria y brindándole la comodidad que necesita para una vida saludable y feliz. </p>
-    </div>
+    <section id="no-plastic">
+      <h2>NO PLASTIC</h2>
+      
+      <div class="product">
+        <img src="utensilio1.jpg" alt="Utensilio 1">
+        <h3><a href="#">Utensilio 1</a></h3>
+        <div class="description">
+          <p>Descripción del Utensilio 1</p>
+        </div>
+      </div>
+      
+      <!-- Añadir más productos aquí -->
+      
+      <div class="product">
+        <img src="utensilio2.jpg" alt="Utensilio 2">
+        <h3><a href="#">Utensilio 2</a></h3>
+        <div class="description">
+          <p>Descripción del Utensilio 2</p>
+        </div>
+      </div>
+    </section>
   </main>
+  
+  <footer>
+    <div>
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+    
+
+    <div>
+      <a href="#">Aviso de Privacidad</a> | 
+      <a href="tel:123456789">Teléfono: 5566633305</a> |
+      <a href="mailto:info@example.com">Correo: biostanza@gmail.com</a>
+    </div>
+  </footer>
+  
+  <div class="cart">
+    <p>Carrito de Compra</p>
+    <!-- Aquí puedes agregar el contenido del carrito de compra -->
+  </div>
+</body>
+</html>
+
   
   <footer>
     &copy; 2023 BioStanza. Todos los derechos reservados.
