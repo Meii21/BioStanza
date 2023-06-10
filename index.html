@@ -3,97 +3,98 @@
 <head>
   <title>BioStanza</title>
   <style>
+    /* Estilos generales */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      background-color: #f2f2f2;
     }
     
     header {
-      background-color: rgb(23, 231, 179);
-      color: #fff;
+      background-color: #ffffff;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     h1 {
       margin: 0;
+      color: #228b22;
     }
     
-    section {
-      margin-bottom: 20px;
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     
     .product {
-      border: 1px solid #ccc;
+      background-color: #ffffff;
       border-radius: 4px;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: flex;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      width: 300px;
+      padding: 20px;
     }
     
     .product img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      margin-right: 10px;
-    }
-    
-    .product .details {
-      flex: 1;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
     
     .product h3 {
-      margin-top: 0;
+      margin: 0;
+      color: #228b22;
     }
     
     .product p {
-      color: #666;
+      color: #666666;
+    }
+    
+    footer {
+      background-color: #228b22;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>BioStanza</h1>
+    <h1>Tienda de Muebles Sustentables</h1>
   </header>
   
-  <section>
-    <h2>Nuestros productos</h2>
-    
+  <main>
     <div class="product">
       <img src="mueble1.jpg" alt="Mueble 1">
-      <div class="details">
-        <h3>Casa perro</h3>
-        <p>Precio: $199</p>
-        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+      <h3>Mueble 1</h3>
+      <p>Precio: $199</p>
+      <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    
+    <!-- Añadir más productos aquí -->
     
     <div class="product">
       <img src="mueble2.jpg" alt="Mueble 2">
-      <div class="details">
-        <h3>Casa gato</h3>
-        <p>Precio: $299</p>
-        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+      <h3>Mueble 2</h3>
+      <p>Precio: $299</p>
+      <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </section>
-  
-  <section>
-    <h2>Contáctanos</h2>
     
-    <form>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name">
-      
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email">
-      
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message"></textarea>
-      
-      <input type="submit" value="Enviar">
-    </form>
-  </section>
+    <div class="product">
+      <img src="mueble3.jpg" alt="Mueble 3">
+      <h3>Mueble 3</h3>
+      <p>Precio: $249</p>
+      <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </main>
+  
+  <footer>
+    &copy; 2023 Tienda de Muebles Sustentables. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
