@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BioStanza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: rgb(23, 231, 179);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    section {
+      margin-bottom: 20px;
+    }
+    
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+    }
+    
+    .product img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    
+    .product .details {
+      flex: 1;
+    }
+    
+    .product h3 {
+      margin-top: 0;
+    }
+    
+    .product p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BioStanza</h1>
+  </header>
+  
+  <section>
+    <h2>Nuestros productos</h2>
+    
+    <div class="product">
+      <img src="mueble1.jpg" alt="Mueble 1">
+      <div class="details">
+        <h3>Casa perro</h3>
+        <p>Precio: $199</p>
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="mueble2.jpg" alt="Mueble 2">
+      <div class="details">
+        <h3>Casa gato</h3>
+        <p>Precio: $299</p>
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <h2>Contáctanos</h2>
+    
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message"></textarea>
+      
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+</body>
+</html>
